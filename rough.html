@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: rgb(22, 22, 67);
+      margin: 0;
+    }
+
+    .hover-text {
+      font-size: 100px;
+      font-weight: bold;
+      color: rgb(255, 252, 65);
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+      transition: transform 0.3s ease, text-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .hover-text:hover {
+      transform: scale(1.2);
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 
+                   /* 0 0 30px rgba(255, 248, 252, 0.6), 
+                   0 0 40px rgba(255, 255, 255, 0.5); */
+    }
+  </style>
+</head>
+<body>
+  <div class="hover-text">ध       रो         ह         र</div>
+</body>
+</html>
