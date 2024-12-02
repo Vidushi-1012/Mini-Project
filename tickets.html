@@ -19,13 +19,15 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            padding: 20px;
         }
 
         .container {
-            width: 100%;
-            max-width: 700px;
-            padding: 20px;
-            background-color: #aa8ff4;
+            width: 70%; 
+            max-width: 900px;
+            /* height: 100%; */
+            padding: 40px;
+            background-color: #02006a;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
@@ -37,23 +39,34 @@
 
         header h1 {
             font-size: 2rem;
-            color: #333;
+            color: #ffffff;
+
         }
 
         .form-container {
-            padding: 20px;
+            /* height: 80%; */
+            /* padding: 20px; */
             background-color: #f9f9f9;
-            border-radius: 8px;
+            border-radius: 5px;
+            width: 100%; 
+            height: auto;
+            /* max-width: 900px; */
+            /* height: 100%; */
+            padding: 30px;
+            align-items: center;
+            
         }
 
         .ticket-form .form-group {
             margin-bottom: 20px;
+            
         }
 
         .ticket-form label {
             font-weight: bold;
             display: block;
             margin-bottom: 5px;
+            
         }
 
         .ticket-form input, .ticket-form select {
@@ -63,6 +76,7 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             outline: none;
+            margin-bottom: 30px;
         }
 
         .ticket-form input:focus, .ticket-form select:focus {
@@ -78,6 +92,7 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            margin-top: 20px;
         }
 
         .submit-btn:hover {
@@ -88,6 +103,7 @@
             text-align: center;
             margin-top: 20px;
             font-size: 0.9rem;
+            color: #f9f9f9;
         }
 
         .footer a {
@@ -103,11 +119,10 @@
 <body>
     <div class="container">
         <header>
-            <h1>Book Your Tickets for Dharohar 2024</h1>
+            <h1>Book Your Tickets for धरोहर'24</h1>
         </header>
 
         <div class="form-container">
-            <form action="submit_ticket_booking.php" method="POST" class="ticket-form">
                 <div class="form-group">
                     <label for="name">Full Name:</label>
                     <input type="text" id="name" name="name" required placeholder="Enter your full name">
@@ -126,10 +141,10 @@
                 <div class="form-group">
                     <label for="event">Select Event:</label>
                     <select id="event" name="event" required>
-                        <option value="music">Music Concert</option>
-                        <option value="dance">Dance Performance</option>
-                        <option value="comedy">Comedy Show</option>
-                        <option value="workshop">Workshop</option>
+                        <option value="music">Music Concert (350/-)</option>
+                        <option value="dance">Dance Performance (400/-)</option>
+                        <option value="comedy">Comedy Show (300/-)</option>
+                        <option value="workshop">Workshop (200/-)</option>
                     </select>
                 </div>
                 
@@ -145,7 +160,8 @@
         </div>
 
         <div class="footer">
-            <p>For more information, visit our <a href="index.html">home page</a>.</p>
+            <p>For more information,<a href="contact.html"> Contact us.</a> <br>
+            Click here to go back<a href="D_home.html"> HOME</a></p>
         </div>
     </div>
 </body>
