@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +13,9 @@
         }
 
         body {
+            background-color: rgb(22, 22, 67);
             font-family: Arial, sans-serif;
-            background-color: #02006a;
-            color: #333;
+            color: white;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -22,17 +23,42 @@
             padding: 20px;
         }
 
+        nav {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: #12122f;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
         .container {
-            width: 70%; 
+            width: 70%;
             max-width: 900px;
             padding: 40px;
-            background-color: #02006a;
+            background-color: rgba(54, 54, 66, 0.8);
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(54, 54, 66, 0.8);
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            margin-top: 120px; /* Adds space below the fixed nav */
         }
 
         header {
@@ -42,13 +68,13 @@
 
         header h1 {
             font-size: 2rem;
-            color: #ffffff;
+            color: #ffd700;
         }
 
         .form-container {
-            background-color: #f9f9f9;
+            /* background-color: #f9f9f9; */
             border-radius: 5px;
-            width: 80%; 
+            width: 80%;
             padding: 30px;
             text-align: center;
         }
@@ -68,7 +94,8 @@
             padding-right: 10px;
         }
 
-        .ticket-form input, .ticket-form select {
+        .ticket-form input,
+        .ticket-form select {
             width: 65%;
             padding: 10px;
             font-size: 1rem;
@@ -77,7 +104,8 @@
             outline: none;
         }
 
-        .ticket-form input:focus, .ticket-form select:focus {
+        .ticket-form input:focus,
+        .ticket-form select:focus {
             border-color: #007BFF;
         }
 
@@ -85,8 +113,8 @@
             width: 50%;
             padding: 15px;
             font-size: 1.2rem;
-            color: #fff;
-            background-color: #007BFF;
+            color: #000000;
+            background-color: #ffd700;
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -100,7 +128,7 @@
             text-align: center;
             margin-top: 20px;
             font-size: 0.9rem;
-            color: #000000;
+            color: #ffffff;
         }
 
         .footer a {
@@ -113,7 +141,18 @@
         }
     </style>
 </head>
+
 <body>
+
+    <nav>
+        <a href="college fest.html"><img src="Dharohar logo cropped.jpg" alt="Dharohar Logo" width="120"></a>
+        <a href="D_home.html">Home</a>
+        <a href="Dharohar_about.html">About Us</a>
+        <a href="tickets.html">Get Tickets</a>
+        <a href="refund-policy.html">Refund Policy</a>
+        <a href="contact-us.html">Contact Us</a>
+    </nav>
+
     <div class="container">
         <header>
             <h1>Book Your Tickets for धरोहर'24</h1>
@@ -144,17 +183,20 @@
                 </div>
                 <div class="form-group">
                     <label for="tickets">Number of Tickets:</label>
-                    <input type="number" id="tickets" name="tickets" min="1" max="10" required placeholder="Enter number of tickets">
+                    <input type="number" id="tickets" name="tickets" min="1" max="10" required
+                        placeholder="Enter number of tickets">
                 </div>
-                <div class="form-group" style="justify-content: center;">
+                <div class="form-group" style="justify-content:center;">
                     <button type="submit" class="submit-btn">Book Tickets</button>
                 </div>
             </form>
             <div class="footer">
-                <p>For more information, <a href="contact.html">Contact us</a>.<br>
-                Click here to go back <a href="D_home.html">HOME</a></p>
+                <p>For more information, <a href="contact-us.html">Contact us</a>.<br>
+                    Click here to go back <a href="D_home.html">HOME</a></p>
             </div>
         </div>
     </div>
+
 </body>
+
 </html>

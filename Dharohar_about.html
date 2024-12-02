@@ -24,16 +24,26 @@
 
         nav {
             width: 100%;
-            height: 100px;
+            height: 80px;
             display: flex;
-            gap: 2px;
+            align-items: center;
+            justify-content: space-around;
+            background-color: #12122f;
             position: fixed;
-            z-index: 1;
-            font-size: large;
-            justify-content: center;
-            justify-items: center;
-            justify-self: center;
-            background-color: rgb(16, 16, 60);
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffd700;
         }
 
         a:link,
@@ -91,17 +101,12 @@
 <body>
     <main>
         <nav>
-
-            <div class="boxes"><a href="college fest.html" target="_self"><img src="Dharohar logo cropped.jpg"
-                        alt="Dharohar Logo" width="150px" height="100px"></a></div>
-            <div class="boxes"><a href="rough.html" target="_self">Home</a></div>
-            <div class="boxes"><a href="Dharohar_about.html">About Us</a></div>
-            <!-- <div class="boxes">धरोहर '24</div> -->
-            <div class="boxes"><a href="tickets.html">Get Tickets</a></div>
-            <!-- <div class="boxes">Life @ Dharohar</div> -->
-            <!-- <div class="boxes">Our Sponsors</div> -->
-            <div class="boxes">Refund Policy</div>
-            <div class="boxes">Contact Us</div>
+            <a href="college fest.html"><img src="Dharohar logo cropped.jpg" alt="Dharohar Logo" width="120"></a>
+            <a href="D_home.html">Home</a>
+            <a href="Dharohar_about.html">About Us</a>
+            <a href="tickets.html">Get Tickets</a>
+            <a href="#">Refund Policy</a>
+            <a href="contact-us.html">Contact Us</a>
         </nav>
 
         <article id="about_us">
