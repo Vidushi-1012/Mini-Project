@@ -171,9 +171,9 @@
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
-    .para2 {
-      justify-content: flex-end;
-      text-align: right;
+    .para2 img {
+      position: relative;
+      bottom: 30px;
     }
 
     * {
@@ -262,70 +262,77 @@
       transition: 0.1s;
     }
 
-    .footerNav {
-      margin: 35px;
+    footer {
+      background-color: #1e1d1d;
+      width: 100%;
+      color: white;
+      position: relative;
+    }
 
+    .cont {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .icons a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      background-color: white;
+      border-radius: 50%;
+      margin: 5px;
+      transition: transform 0.3s ease;
+    }
+
+    .icons a i {
+      font-size: 1.5em;
+      color: rgb(17, 0, 255);
+    }
+
+    .icons a:hover {
+      transform: scale(1.1);
     }
 
     .footerNav ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
       display: flex;
       justify-content: center;
-      list-style-type: none;
-
-
+      gap: 15px;
     }
 
     .footerNav ul li a {
-      color: rgb(255, 255, 255);
-
-      margin: 20px;
+      color: white;
       text-decoration: none;
-      font-size: 1.3em;
-      opacity: 100%;
-
+      font-size: 1em;
+      opacity: 0.8;
     }
 
     .footerNav ul li a:hover {
-      opacity: 0.3;
-      transition: 0.1s;
-
+      opacity: 1;
     }
 
     .footerBottom {
-      background-color: rgb(0, 0, 0);
-      padding: 20px;
+      background-color: black;
+      padding: 15px;
+      color: #989ca0;
+      font-size: 0.9em;
       text-align: center;
-
-
-    }
-
-    .footerBottom {
-      color: rgb(152, 156, 160);
     }
 
     .designer {
-      opacity: 70%;
-      letter-spacing: 1px;
+      opacity: 0.8;
       text-transform: uppercase;
-      font-weight: 400;
-      margin: 0px 5px;
-    }
-
-    @media (max-width: 700px) {
-      .footerNav ul {
-        flex-direction: column;
-      }
-
-      .footerNav ul li {
-        width: 100%;
-        text-align: center;
-        margin: 10px;
-      }
-
-      .icons a {
-        padding: 8px;
-        margin: 4px;
-      }
+      font-weight: 600;
     }
   </style>
 </head>
@@ -337,7 +344,7 @@
       <a href="D_home.html">Home</a>
       <a href="Dharohar_about.html">About Us</a>
       <a href="tickets.html">Get Tickets</a>
-      <a href="#">Refund Policy</a>
+      <a href="refund_policy.html" target="_blank">Refund Policy</a>
       <a href="contact-us.html">Contact Us</a>
     </nav>
 
@@ -435,10 +442,9 @@
         </div>
         <div class="footerNav">
           <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">News</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact Us</a></li>
+            <li><a href="D_home.html">Home</a></li>
+            <li><a href="Dharohar_about.html">About</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
             <li><a href="">Our Team</a></li>
           </ul>
 

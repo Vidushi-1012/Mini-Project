@@ -19,7 +19,6 @@
         main {
             width: 100%;
             height: auto;
-            /* background-color: blue; */
         }
 
         nav {
@@ -46,32 +45,11 @@
             color: #ffd700;
         }
 
-        a:link,
-        a:visited {
-            color: white;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: yellow;
-            text-decoration: underline;
-        }
-
-        .boxes {
-            width: 150px;
-            height: 100px;
-            color: white;
-            /* background-color: rgb(74, 77, 142); */
-            align-content: center;
-            text-align: center;
-        }
-
         article {
             width: 80%;
             position: relative;
             margin: 0 auto;
             top: 120px;
-            z-index: 0;
             color: white;
         }
 
@@ -80,20 +58,84 @@
         .para3 {
             width: 100%;
             display: flex;
-            /* margin: 10px; */
         }
 
         article p {
             font-size: 25px;
             width: 80%;
-            /* text-align: center; */
-            /* justify-self: center; */
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
 
         .para2 {
             justify-self: right;
             text-align: right;
+        }
+
+        footer {
+            background-color: #1e1d1d;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .icons a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 50%;
+            margin: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .icons a i {
+            font-size: 1.5em;
+            color: rgb(17, 0, 255);
+        }
+
+        .icons a:hover {
+            transform: scale(1.1);
+        }
+
+        .footerNav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .footerNav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+            opacity: 0.8;
+        }
+
+        .footerNav ul li a:hover {
+            opacity: 1;
+        }
+
+        .footerBottom {
+            background-color: black;
+            padding: 15px;
+            color: #989ca0;
+            font-size: 0.9em;
+        }
+
+        .designer {
+            opacity: 0.8;
+            text-transform: uppercase;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -105,14 +147,15 @@
             <a href="D_home.html">Home</a>
             <a href="Dharohar_about.html">About Us</a>
             <a href="tickets.html">Get Tickets</a>
-            <a href="#">Refund Policy</a>
+            <a href="refund_policy.html">Refund Policy</a>
             <a href="contact-us.html">Contact Us</a>
         </nav>
 
         <article id="about_us">
             <h2
-                style="width: 100%; background-color: rgba(54, 54, 66, 0.938); color: white;text-align: center; font-size: 50px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin-bottom: 5px;">
-                IT'S GO TIME! WELCOME TO धरोहर 2024!</h2>
+                style="width: 100%; background-color: rgba(54, 54, 66, 0.938); color: white;text-align: center; font-size: 50px;">
+                IT'S GO TIME! WELCOME TO धरोहर 2024!
+            </h2>
 
             <div class="para1">
                 <div>
@@ -120,44 +163,55 @@
                 </div>
                 <div>
                     <p>
-                        <b>Dharohar</b> is an exciting three-day festival at ABES Engineering College, celebrating
-                        culture, creativity, and
-                        innovation. Organized by students, it blends technical skills with artistic expression,
-                        attracting participants from
-                        across the country for a memorable experience.
+                        <b>Dharohar</b> is an exciting three-day festival at ABES Engineering College, celebrating culture,
+                        creativity, and innovation. Organized by students, it blends technical skills with artistic
+                        expression, attracting participants from across the country for a memorable experience.
                     </p>
                 </div>
             </div>
             <div class="para2">
                 <div>
-                    <p>The festival features thrilling attractions like a Ferris wheel and roller coaster, alongside
-                        interactive games and
-                        competitions. A celebrity guest adds extra excitement, while sponsors provide prizes and
-                        goodies, ensuring plenty of fun
-                        for all attendees.
-
+                    <p>The festival features thrilling attractions like a Ferris wheel and roller coaster, alongside interactive
+                        games and competitions. A celebrity guest adds extra excitement, while sponsors provide prizes and
+                        goodies, ensuring plenty of fun for all attendees.
                     </p>
                 </div>
                 <div>
                     <img src="Ferris wheel.jpg" alt="Picture of a Ferris wheel" width="350px" height="250px">
                 </div>
-
             </div>
             <div class="para3">
                 <div>
                     <img src="performance.jpg" alt="Crowd enjoying a performance" width="350px" height="250px">
                 </div>
                 <div>
-                    <p>At its core,<b>Dharohar</b> showcases vibrant cultural performances, including dance, music, and
-                        DJ acts. It's a platform
-                        for students to showcase their talents, connect with peers, and celebrate the spirit of student
-                        life.
+                    <p>At its core, <b>Dharohar</b> showcases vibrant cultural performances, including dance, music, and DJ acts.
+                        It's a platform for students to showcase their talents, connect with peers, and celebrate the spirit
+                        of student life.
                     </p>
                 </div>
             </div>
-            
         </article>
-        
+
+        <footer>
+            <div class="icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a href="D_home.html">Home</a></li>
+                    <li><a href="Dharohar_about.html">About</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                    <li><a href="#">Team</a></li>
+                </ul>
+            </div>
+            <div class="footerBottom">
+                <p>&copy; 2024 Designed by <span class="designer">TEAM DHAROHAR</span></p>
+            </div>
+        </footer>
     </main>
 </body>
 
