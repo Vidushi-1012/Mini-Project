@@ -25,39 +25,68 @@
             height: 100vh;
         }
 
+        /* NAV BAR */
         nav {
             width: 100%;
             height: 80px;
             display: flex;
             align-items: center;
-            justify-content: space-around;
+            justify-content: space-between;
             background-color: #12122f;
             position: fixed;
             top: 0;
             z-index: 1;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            font-family: 'Times New Roman', Times, serif;
+            padding: 0 30px;
+            transition: background-color 0.3s ease;
         }
 
-        nav a:link,
-        a:visited {
+        nav img {
+            width: 120px;
+        }
+
+        .nav-bar {
+            display: flex;
+        }
+
+        .nav-bar a {
             color: #fff;
             text-decoration: none;
             font-size: 1.2rem;
-            transition: color 0.3s ease;
+            /* Font size matching second navbar */
+            margin: 0 15px;
+            padding: 5px 10px;
+            position: relative;
+            transition: color 0.3s ease, background-color 0.3s ease;
         }
 
-        nav a:hover,
-        a:active {
+        /* Same hover effects and active underline as in the second navbar */
+        .nav-bar a::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 3px;
+            background: #ffd700;
+            transition: width 0.3s ease-in-out;
+        }
+
+        .nav-bar a:hover::before {
+            width: 100%;
+        }
+
+        .nav-bar a:hover {
             color: #ffd700;
-            text-decoration: underline;
+            background-color: #1e1d1d;
+            border-radius: 5px;
         }
 
-        label:hover,
-        label:active {
-            /* background: rgba(89, 89, 106, 0.8); */
-            font-size: large;
-            transition: 0.2s ease-in-out;
+
+        .main-content {
+            padding-top: 120px;
+            /* to avoid navbar overlay */
+            flex: 1;
         }
 
         .relativeposition {
@@ -336,12 +365,16 @@
 <body>
 
     <nav>
-        <a href="D_home.html"><img src="Dharohar logo cropped.jpg" alt="Dharohar Logo" width="120"></a>
-        <a href="D_home.html">Home</a>
-        <a href="Dharohar_about.html">About Us</a>
-        <a href="tickets.html">Get Tickets</a>
-        <a href="refund-policy.html">Refund Policy</a>
-        <a href="contact-us.html">Contact Us</a>
+        <a href="dnew_home.html"><img src="Dharohar_logo_cropped-removebg-preview.png" alt="Dharohar Logo"></a>
+        <div class="nav-bar">
+            <a href="dnew_home.html">Home</a>
+            <a href="Dharohar_about.html">About Us</a>
+            <a href="tickets.html" target="_blank">Get Tickets</a>
+            <a href="refund_policy.html" target="_blank">Refund Policy</a>
+            <a href="#">FAQs</a>
+            <a href="#">Our Sponsors</a>
+            <a href="contact-us.html" target="_blank">Contact Us</a>
+        </div>
     </nav>
     <div class="relativeposition">
         <div class="container">

@@ -7,7 +7,6 @@
   <title>Get Tickets - Dharohar 2024</title>
   <style>
     /* MAIN BODY */
-    /* MAIN BODY */
     * {
       margin: 0;
       padding: 0;
@@ -31,7 +30,6 @@
       font-family: Arial, sans-serif;
     }
 
-    /* NAV BAR */
     /* NAV BAR */
     nav {
       width: 100%;
@@ -67,38 +65,24 @@
       transition: color 0.3s ease, background-color 0.3s ease;
     }
 
-    /* Active link styles */
-    .nav-bar a.active {
-      color: #ffd700;
-      /* Highlight color for active tab */
-      font-weight: bold;
-      /* Optionally bold the active tab */
-      background-color: rgba(255, 215, 0, 0.1);
-      /* Optional: background color to highlight */
-    }
-
-    /* Hover effect for all links */
-    .nav-bar a:hover::before {
-      width: 100%;
-    }
-
-    /* Active tab underline */
-    .nav-bar a.active::before {
+    .nav-bar a::before {
       content: "";
       position: absolute;
       left: 0;
       bottom: 0;
-      width: 100%;
+      width: 0;
       height: 3px;
       background: #ffd700;
-      /* Golden underline for active tab */
+      transition: width 0.3s ease-in-out;
     }
 
+    .nav-bar a:hover::before {
+      width: 100%;
+    }
 
     /* MAIN CONTENT */
     .main-content {
       padding-top: 120px;
-      /* to avoid navbar overlay */
       flex: 1;
       width: 100%;
       display: flex;
@@ -221,18 +205,18 @@
 </head>
 
 <body>
-  <nav>
-    <a href="D1_home.html"><img src="Dharohar_logo_cropped-removebg-preview.png" alt="Dharohar Logo"></a>
-    <div class="nav-bar">
-      <a href="D1_home.html">Home</a>
-      <a href="Dharohar_about.html">About Us</a>
-      <a href="#">Get Tickets</a>
-      <a href="refund_policy.html" target="_blank">Refund Policy</a>
-      <a href="#">FAQs</a>
-      <a href="#">Our Sponsors</a>
-      <a href="contact-us.html" target="_blank">Contact Us</a>
-    </div>
-  </nav>
+    <nav>
+        <a href="D1_home.html"><img src="Dharohar_logo_cropped-removebg-preview.png" alt="Dharohar Logo"></a>
+        <div class="nav-bar">
+          <a href="D1_home.html">Home</a>
+          <a href="#about_us">About Us</a>
+          <a href="#">Our Sponsors</a>
+          <a href="BookTickets.html" target="_blank">Get Tickets</a>
+          <a href="refund_policy.html" target="_blank">Refund Policy</a>
+          <a href="#">FAQs</a>
+          <a href="ContactUs.html" target="_blank">Contact Us</a>
+        </div>
+      </nav>
 
   <div class="main-content">
     <div class="container">
