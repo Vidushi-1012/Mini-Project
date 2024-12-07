@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dharohar Subheading</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #1e1e2f;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #f7cc35;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      margin-bottom: 20px;
+    }
+
+   /* Subheading Styling */
+.subheading {
+  position: relative;
+  width: 500px; /* Slimmed down width */
+  height: 60px; /* Slimmed down height */
+  margin: 0 auto;
+  background: #27293c;
+  border-radius: 8px; /* Reduced border radius */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Lighter shadow for subtle effect */
+  overflow: hidden;
+}
+
+/* Monitor Wrapper Styling */
+.monitor-wrapper {
+  width: 480px; /* Adjusted to fit the new subheading size */
+  height: 40px; /* Reduced height */
+  background: #12132b;
+  margin: 10px auto;
+  border: 1px solid #f7cc35; /* Thin border for a polished look */
+  border-radius: 5px; /* Slight rounding for aesthetics */
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.4); /* Subtle inner shadow */
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+/* Monitor Text Animation */
+.monitor-wrapper .monitor p {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2rem; /* Reduced font size for professional style */
+  font-weight: bold;
+  position: absolute;
+  display: inline-block;
+  animation: move 25s infinite linear;
+  color: #f7cc35;
+  white-space: nowrap;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Softer shadow for clarity */
+}
+
+
+    @keyframes move {
+      from {
+        left: 600px;
+      }
+      to {
+        left: -1200px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>धरोहर 2024</h1>
+  <div class="subheading">
+    <div class="monitor-wrapper">
+      <div class="monitor" style="text-align: center;">
+        <p>Unite, Celebrate, Create | 3-Day Cultural Fest | ABES Engineering College | Fun, Festivities & More!</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -4,424 +4,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Ticket Booking - Dharohar 2024</title>
+    <title>Navigation Bar with Hover Effect</title>
+    <link rel="stylesheet" href="style.css">
     <style>
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
-            background-color: rgb(22, 22, 67);
-            font-family: Arial, sans-serif;
-            color: white;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
+            background: #000;
+        }
+
+        main {
+            width: 100%;
+            margin-top: 60px;
+            /* Added margin for fixed navigation */
         }
 
         nav {
-            width: 100%;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            background-color: #12122f;
             position: fixed;
             top: 0;
-            z-index: 1;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            font-family: 'Times New Roman', Times, serif;
+            width: 524px;
+            height: 50px;
+            background: #222;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            /* Ensure it stays above other elements */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
 
-        nav a:link,
-        a:visited {
+        nav a {
+            position: relative;
+            display: inline-block;
+            font-size: 1em;
             color: #fff;
             text-decoration: none;
-            font-size: 1.2rem;
+            padding: 0 23px;
+            z-index: 1;
             transition: color 0.3s ease;
         }
 
-        nav a:hover,
-        a:active {
-            color: #ffd700;
-            text-decoration: underline;
-        }
-
-        label:hover,
-        label:active {
-            /* background: rgba(89, 89, 106, 0.8); */
-            font-size: large;
-            transition: 0.2s ease-in-out;
-        }
-
-        .relativeposition {
-            position: relative;
-            z-index: 0;
-            top: 130px;
-            width: 100%;
-        }
-
-
-        .container {
-            width: 50%;
-            padding: 20px;
-            background-color: rgba(54, 54, 66, 0.8);
-            border-radius: 10px;
-            /* box-shadow: 0 4px 8px rgba(54, 54, 66, 0.8); */
-            /* display: flex; */
-            justify-content: center;
-            justify-self: center;
-            align-items: center;
-            margin: 30px;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        header h1 {
-            font-size: 2rem;
+        nav a:hover {
             color: #ffd700;
         }
 
-        .form-container {
-            /* background-color: #f9f9f9; */
-            border-radius: 5px;
-            width: 100%;
-            padding: 30px;
-            text-align: center;
-            justify-content: center;
-            justify-self: center;
-            align-items: center;
-            margin-right: 120px;
+        nav span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 95px;
+            height: 100%;
+            background: linear-gradient(45deg, #2e3192, #1bffff);
+            border-radius: 8px;
+            transition: 0.5s ease;
         }
 
-        .ticket-form .form-group {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 20px;
-            width: 100%;
-            /* margin-left: 50px; */
+        nav a:nth-child(1):hover~span {
+            left: 0;
         }
 
-        .ticket-form label {
-            font-weight: bold;
-            width: 50%;
-            text-align: right;
-            padding-right: 10px;
+        nav a:nth-child(2):hover~span {
+            left: 95px;
         }
 
-        .ticket-form input,
-        .ticket-form select {
-            width: 65%;
-            padding: 10px;
-            font-size: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            outline: none;
+        nav a:nth-child(3):hover~span {
+            left: 189px;
+            width: 110px;
         }
 
-        .ticket-form input:focus,
-        .ticket-form select:focus {
-            border-color: #007BFF;
+        nav a:nth-child(4):hover~span {
+            left: 298px;
+            width: 115px;
         }
 
-        .submit-btn {
-            width: 50%;
-            padding: 10px;
-            font-size: 1.2rem;
-            color: #000000;
-            background-color: #ffd700;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            justify-self: center;
+        nav a:nth-child(5):hover~span {
+            left: 413px;
+            width: 110px;
         }
 
-        .submit-btn:hover {
-            background-color: #0056b3;
+        .hover-text {
             color: white;
+            font-size: 3rem;
+            text-align: center;
+            margin-top: 30px;
         }
 
-        .footerhead1 {
+        .wave {
+            height: 5px;
+            width: 100%;
+            background: linear-gradient(to right, #2e3192, #1bffff);
+            animation: wave 2s linear infinite;
+        }
+
+        @keyframes wave {
+            from {
+                transform: translateX(-100%);
+            }
+
+            to {
+                transform: translateX(100%);
+            }
+        }
+
+        .tagline {
             text-align: center;
+            color: #fff;
+            font-size: 1.5rem;
             margin-top: 20px;
-            font-size: 0.9rem;
-            color: #ffffff;
         }
 
-        .footerhead1head1 a {
-            color: #3597ff;
-            text-decoration: none;
-        }
-
-        .footerhead1 a:hover {
-            font-size: 15px;
-            text-decoration: underline;
-            color: #ffd700;
-            transition: 0.2s ease-in-out;
-        }
-
-        footer {
-            background-color: #1e1d1d;
-            color: white;
-            width: 100%;
-            padding-top: 20px;
-        }
-
-        .cont {
-            width: 100%;
-            padding: 70px 30px 20px;
-        }
-
-        .icons {
-            display: flex;
-            justify-content: center;
-
-        }
-
-        .icons a {
-            text-decoration: none;
-            padding: 10px;
-            background-color: rgb(255, 255, 255);
-            margin: 10px;
-            border-radius: 50%;
-
-        }
-
-        .icons a i {
-            font-size: 2em;
-            color: rgb(17, 0, 255);
-            opacity: 0.9;
-        }
-
-        .icons a j {
-            font-size: 2em;
-            color: rgb(17, 159, 247);
-            opacity: 0.9;
-        }
-
-        .icons a k {
-            font-size: 2em;
-            color: rgb(237, 0, 245);
-            opacity: 0.9;
-        }
-
-        .icons a l {
-            font-size: 2em;
-            color: rgb(84, 84, 76);
-            opacity: 0.9;
-        }
-
-        .icons a n {
-            font-size: 2em;
-            color: rgb(255, 0, 0);
-            opacity: 0.9;
-        }
-
-        .icons a:hover i {
-            color: rgb(138, 157, 255);
-            transition: 0.1s;
-        }
-
-        .icons a:hover j {
-            color: rgb(133, 196, 249);
-            transition: 0.1s;
-        }
-
-        .icons a:hover k {
-            color: rgb(234, 171, 245);
-            transition: 0.1s;
-        }
-
-        .icons a:hover l {
-            color: rgb(145, 146, 137);
-            transition: 0.1s;
-        }
-
-        .icons a:hover n {
-            color: rgb(249, 133, 133);
-            transition: 0.1s;
-        }
-
-        /* footer {
-            background-color: #1e1d1d;
-            width: 100%;
-            color: white;
-        } */
-
-        .cont {
-            padding: 50px 20px;
+        .tagline {
             text-align: center;
-        }
-
-        .icons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .icons a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 50px;
-            height: 50px;
-            background-color: white;
-            border-radius: 50%;
-            margin: 5px;
-            transition: transform 0.3s ease;
-        }
-
-        .icons a i {
-            font-size: 1.5em;
-            color: rgb(17, 0, 255);
-        }
-
-        .icons a:hover {
-            transform: scale(1.1);
-        }
-
-        .footerNav ul {
-            list-style: none;
-            padding: 0;
-            margin: 20px 0;
+            color: #fff;
+            font-size: 2rem;
+            margin-top: 20px;
             display: flex;
             justify-content: center;
             gap: 15px;
         }
 
-        .footerNav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 20px;
-            opacity: 0.8;
+        .word {
+            opacity: 0;
+            animation: fadeInOut 6s ease-in-out infinite;
         }
 
-        .footerNav ul li a:hover {
-            opacity: 1;
-            color: #ffd700;
-            text-decoration: underline;
+        .word:nth-child(1) {
+            animation-delay: 0s;
+            /* "Unite" animates first */
         }
 
-        .footerBottom {
-            background-color: black;
-            padding: 0px;
-            color: #989ca0;
-            font-size: 0.9em;
-            text-align: center;
+        .word:nth-child(2) {
+            animation-delay: 2s;
+            /* "Celebrate" animates second */
         }
 
-        .designer {
-            opacity: 0.8;
-            text-transform: uppercase;
-            font-weight: 600;
+        .word:nth-child(3) {
+            animation-delay: 4s;
+            /* "Create" animates last */
+        }
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            20%,
+            80% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
         }
     </style>
 </head>
 
 <body>
+    <main>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#about_us">About</a>
+            <a href="tickets.html" target="_blank">Product</a>
+            <a href="refund_policy.html" target="_blank">Services</a>
+            <a href="contact-us.html" target="_blank">Contact</a>
+            <span></span>
+        </nav>
 
-    <nav>
-        <a href="college fest.html"><img src="Dharohar logo cropped.jpg" alt="Dharohar Logo" width="120"></a>
-        <a href="D_home.html">Home</a>
-        <a href="Dharohar_about.html">About Us</a>
-        <a href="tickets.html">Get Tickets</a>
-        <a href="refund-policy.html">Refund Policy</a>
-        <a href="contact-us.html">Contact Us</a>
-    </nav>
-    <div class="relativeposition">
-        <div class="container">
-            <header>
-                <h1>Book Your Tickets for धरोहर'24</h1>
-            </header>
-            <div class="form-container">
-                <form class="ticket-form" action="#" method="post">
-                    <div class="form-group">
-                        <label for="name">Full Name:</label>
-                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address:</label>
-                        <input type="email" id="email" name="email" required placeholder="Enter your email">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number:</label>
-                        <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
-                    </div>
-                    <div class="form-group">
-                        <label for="event">Select Event:</label>
-                        <select id="event" name="event" required>
-                            <option value="" disabled selected>Select an event</option>
-                            <option value="music">Music Concert (350/-)</option>
-                            <option value="dance">Dance Performance (400/-)</option>
-                            <option value="comedy">Comedy Show (300/-)</option>
-                            <option value="workshop">Workshop (200/-)</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="tickets">Number of Tickets:</label>
-                        <input type="number" id="tickets" name="tickets" min="1" max="10" required
-                            placeholder="Enter number of tickets">
-                    </div>
-                    <div class="form-group" style="justify-content:center;">
-                        <button type="submit" class="submit-btn">Book Tickets</button>
-                    </div>
-                </form>
-                <div class="footerhead1">
-                    <p>For more information, <a href="contact-us.html" target="_blank">Contact us</a>.<br>
-                        Click here to go back <a href="D_home.html">HOME</a></p>
-                </div>
-            </div>
+        <div id="home-section" style="margin-top: 80px;">
+            <div class="hover-text">ध &nbsp;&nbsp;रो &nbsp;&nbsp;ह &nbsp;&nbsp;र <br><br></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
         </div>
 
-        <footer>
-            <div class="cont">
-                <div class="icons">
-                    <a href="">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
-                    <a href="">
-                        <j class="fa-brands fa-twitter"></j>
-                    </a>
-                    <a href="">
-                        <k class="fa-brands fa-instagram"></k>
-                    </a>
-                    <a href="">
-                        <l class="fa-brands fa-google-plus"></l>
-                    </a>
-                    <a href="">
-                        <n class="fa-brands fa-youtube"></n>
-                    </a>
-                </div>
+        <div class="tagline">
+            <span class="word" data-word="Unite">Unite</span>
+            <span class="word" data-word="Celebrate">Celebrate</span>
+            <span class="word" data-word="Create">Create</span>
+        </div>
 
-
-                <div class="footerNav">
-                    <ul>
-                        <li><a href="D_home.html">Home</a></li>
-                        <li><a href="Dharohar_about.html">About</a></li>
-                        <li><a href="contact-us.html">Contact Us</a></li>
-                        <li><a href="">Our Team</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footerBottom">
-                <p>Copyright &copy2024;Designed by <span class="designer">TEAM DHAROHAR</span></p>
-
-            </div>
-
-        </footer>
-
-
-    </div>
+    </main>
 </body>
 
 </html>
