@@ -7,7 +7,334 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Dharohar - The Ultimate Fest</title>
+    <title>Schedule - Dharohar 2024</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --mainc: rgb(246 200 96);
+        }
+
+        body {
+            width: 100%;
+            background-color: rgb(16, 16, 60);
+            color: rgba(255, 255, 255, 0.989);
+            justify-self: center;
+            font-size: larger;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+
+        nav {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #12122f;
+            font-family: 'Times New Roman', Times, serif;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 0 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav img {
+            width: 120px;
+        }
+
+        .nav-bar {
+            display: flex;
+        }
+
+        .nav-bar a:link,
+        a:visited {
+            color: #fff !important;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 0 15px;
+            padding: 5px 10px;
+            position: relative;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        .nav-bar a::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 3px;
+            background: #ffd700;
+            transition: width 0.3s ease-in-out;
+        }
+
+        .nav-bar a:hover::before {
+            width: 100%;
+        }
+
+        .nav-bar a:hover {
+            color: #ffd700;
+            background-color: #1e1d1d;
+            border-radius: 5px;
+        }
+
+        /* ------------------------------------------schedule----------------------------------------- */
+
+
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            text-decoration: underline;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+        }
+
+        .relativeposition {
+            position: relative;
+            z-index: 0;
+            top: 100px;
+
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: rgba(54, 54, 66, 0.8);
+            box-shadow: 4px 4px 2px rgba(114, 106, 198, 0.73);
+            border-radius: 25px;
+            margin-bottom: 40px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .section {
+            padding: 20px;
+            border-bottom: 1px solid rgb(166, 155, 232);
+        }
+
+        .section h3{
+            color: rgb(133, 133, 230);
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .section .subheading{
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .section .text{
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+
+        /* -------------------------------------------FOOTER-------------------------------------------------------- */
+
+        footer {
+            background-color: #181925;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .cont {
+            width: 100%;
+            padding: 70px 30px 20px;
+            display: flex;
+        }
+
+        .box1 {
+            width: 400px;
+        }
+
+        .icons {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .icons a {
+            text-decoration: none;
+            padding: 10px;
+            background-color: rgb(255, 255, 255);
+            margin: 10px;
+            border-radius: 50%;
+
+        }
+
+        .icons a i {
+            font-size: 1.5em;
+            color: rgb(17, 0, 255);
+            opacity: 0.9;
+        }
+
+        .icons a j {
+            font-size: 1em;
+            color: rgb(17, 159, 247);
+            opacity: 0.9;
+        }
+
+        .icons a k {
+            font-size: 1em;
+            color: rgb(237, 0, 245);
+            opacity: 0.9;
+        }
+
+        .icons a l {
+            font-size: 1em;
+            color: rgb(84, 84, 76);
+            opacity: 0.9;
+        }
+
+        .icons a n {
+            font-size: 1em;
+            color: rgb(255, 0, 0);
+            opacity: 0.9;
+        }
+
+        .icons a:hover i {
+            color: rgb(138, 157, 255);
+            transition: 0.1s;
+        }
+
+        .icons a:hover j {
+            color: rgb(133, 196, 249);
+            transition: 0.1s;
+        }
+
+        .icons a:hover k {
+            color: rgb(234, 171, 245);
+            transition: 0.1s;
+        }
+
+        .icons a:hover l {
+            color: rgb(145, 146, 137);
+            transition: 0.1s;
+        }
+
+        .icons a:hover n {
+            color: rgb(249, 133, 133);
+            transition: 0.1s;
+        }
+
+        .footerNav {
+            margin: 35px;
+        }
+
+        .box2 {
+            display: flex;
+            gap: 15px;
+        }
+
+        .student {
+            width: 250px;
+            color: white;
+            background-color: rgba(31, 15, 109, 0.823);
+            padding: 5px;
+            border: 3px solid rgba(12, 6, 65, 0.871);
+            box-shadow: 4px 4px 2px rgba(101, 105, 168, 0.871);
+            line-height: 1.5;
+            font-size: 18px;
+        }
+
+        .student h3 {
+            color: rgb(255, 0, 212);
+            font-style: italic;
+            font-size: 20px;
+        }
+
+        .student a:link,
+        a:visited {
+            color: #fff;
+        }
+
+        .student a:hover {
+            color: #ffd700;
+        }
+
+        .name {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .footerNav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        .footerNav ul li a {
+            color: rgb(255, 255, 255);
+            margin: 20px;
+            text-decoration: none;
+            font-size: 1em;
+            opacity: 100%;
+
+        }
+
+        .footerNav ul li a:hover {
+            /* opacity: 0.3; */
+            transition: 0.1s;
+            color: rgba(250, 218, 10, 0.816);
+            text-decoration: underline;
+        }
+
+        .footerBottom {
+            background-color: rgb(0, 0, 0);
+            padding: 20px;
+            text-align: center;
+            color: rgb(152, 156, 160);
+            opacity: 70%;
+            display: flex;
+            gap: 750px;
+            font-size: smaller;
+        }
+
+        .designer {
+            opacity: 70%;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 400;
+            margin: 0px 5px;
+        }
+
+        @media (max-width: 700px) {
+            .footerNav ul {
+                flex-direction: column;
+            }
+
+            .footerNav ul li {
+                width: 100%;
+                text-align: center;
+                margin: 10px;
+            }
+
+            .icons a {
+                padding: 8px;
+                margin: 4px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="D_home.html"><img src="Dharohar_logo_cropped-removebg-preview.png" alt="Dharohar Logo"></a>
+        <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Dharohar - Rough</title>
     <style>
         /* MAIN BODY */
         * {
@@ -63,9 +390,10 @@
 
         .nav-bar {
             display: flex;
+            float: right ;
         }
 
-        .nav-bar a {
+        nav a {
             color: #fff;
             text-decoration: none;
             font-size: 1.2rem;
@@ -75,7 +403,7 @@
             transition: color 0.3s ease, background-color 0.3s ease;
         }
 
-        .nav-bar a::before {
+        nav a::before {
             content: "";
             position: absolute;
             left: 0;
@@ -86,14 +414,61 @@
             transition: width 0.3s ease-in-out;
         }
 
-        .nav-bar a:hover::before {
+        nav a:hover::before {
             width: 100%;
         }
 
-        .nav-bar a:hover {
+        nav a:hover {
             color: #ffd700;
             background-color: #1e1d1d;
             border-radius: 5px;
+        }
+
+        .dropbtn {
+            background-color: #341fc1;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            /* position: relative; */
+            /* display: inline-block; */
+            background-color: #7a77ac;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            /* padding: 40px; */
+            width: 360px;
+            height: 700px;
+            background-color: #19182465;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 30px;
+            width: 100%;
+            height: 10px;
+            /* margin-bottom: 10px; */
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #201251;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #151254;
         }
 
         .main-content {
@@ -552,13 +927,18 @@
         <div class="nav-bar">
             <a href="D_home.html">Home</a>
             <a href="#about_us">About Us</a>
-            <a href="gallery.html">Picture Gallery</a>
-            <a href="#sponsor">Our Sponsors</a>
             <a href="schedule.html" target="_blank">Schedule '24</a>
             <a href="tickets.html" target="_blank">Get Tickets</a>
-            <a href="refund_policy.html" target="_blank">Refund Policy</a>
-            <a href="D_faq.html" target="_blank">FAQs</a>
-            <a href="contact-us.html" target="_blank">Contact Us</a>
+        </div>
+        <div class="dropdown" style="float: right;">
+            <button class="dropbtn">=</button>
+            <div class="dropdown-content">
+                <a href="gallery.html">Picture Gallery</a>
+                <a href="#sponsor">Our Sponsors</a>
+                <a href="refund_policy.html" target="_blank">Refund Policy</a>
+                <a href="D_faq.html" target="_blank">FAQs</a>
+                <a href="contact-us.html" target="_blank">Contact Us</a>
+            </div>
         </div>
     </nav>
 
@@ -758,11 +1138,11 @@
                 </div>
 
                 <div class="footerNav">
-                  <ul>
-                    <li><a href="D1_home.html">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="ContactUs.html">Contact Us</a></li>
-                </ul>
+                    <ul>
+                        <li><a href="D_home.html">Home</a></li>
+                        <li><a href="#about_us">About</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
 
                 </div>
             </div>
@@ -819,6 +1199,143 @@
         </div>
     </footer>
 
+</body>
+
+</html>
+    </nav>
+    <div class="relativeposition">
+        <div class="container">
+            <h1>
+                Full Schedule for धरोहर '24
+            </h1>
+            <div class="section">
+                <h3>Day 1: Magical & Creative Kickoff</h3>
+                <div class="subheading">5:00 PM - 6:00 PM: Welcome & Icebreaker Games</div>
+                <div class="text">Fun games like “Human Bingo” and “Two Truths and a Lie” to start the event.</div>
+                <div class="subheading">6:00 PM - 7:00 PM: Magic Show</div>
+                <div class="text">A mesmerizing performance by a professional magician.</div>
+                <div class="subheading">7:00 PM - 8:00 PM: Handicrafts Workshop</div>
+                <div class="text">Participants create their own crafts, such as painting or DIY art projects.</div>
+                <div class="subheading">8:00 PM - 10:00 PM: Trivia Challenge & Quick Contests</div>
+                <div class="text">Team-based trivia and short contests like “Minute to Win It” games.</div>
+            </div>
+
+            <div class="section">
+                <h3>Day 2: Musical & Fun Evening</h3>
+                <div class="subheading">5:00 PM - 6:00 PM: Outdoor Games & Challenges</div>
+                <div class="text">Relay races, scavenger hunts, or tug-of-war to energize the evening.</div>
+                <div class="subheading">6:00 PM - 7:30 PM: Music Concert</div>
+                <div class="text">A live performance by a band or solo artist featuring popular and uplifting music.
+                </div>
+                <div class="subheading">7:30 PM - 8:30 PM: Costume Contest</div>
+                <div class="text">Participants dress up according to the evening’s theme, with prizes for creativity.
+                </div>
+                <div class="subheading">8:30 PM - 10:00 PM: Dance Party</div>
+                <div class="text">A DJ-led session for everyone to groove and enjoy freestyle dancing.</div>
+            </div>
+
+            <div class="section">
+                <h3>Day 3: Dance-Filled Grand Finale</h3>
+                <div class="subheading">5:00 PM - 6:00 PM: Fun Warm-Up Games</div>
+                <div class="text">Interactive activities like charades, Pictionary, or “Simon Says.”</div>
+                <div class="subheading">6:00 PM - 7:30 PM: Talent Contest</div>
+                <div class="text">Participants showcase their unique skills, from singing to storytelling.</div>
+                <div class="subheading">7:30 PM - 8:30 PM: Dance Performances</div>
+                <div class="text">A lineup of stunning solo and group dance performances.</div>
+                <div class="subheading">8:30 PM - 10:00 PM: Closing Ceremony & Glow Party</div>
+                <div class="text">Awards for the contests, thank-you notes, and a neon-themed farewell celebration.
+                </div>
+            </div>
+
+        </div>
+        <!-- ---------------------------------------------------footer------------------------------------------------------>
+        <footer>
+            <div class="cont">
+                <div class="box1">
+                    <div class="icons">
+                        <a href="">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="">
+                            <j class="fa-brands fa-twitter"></j>
+                        </a>
+                        <a href="">
+                            <k class="fa-brands fa-instagram"></k>
+                        </a>
+                        
+                        <a href="">
+                            <n class="fa-brands fa-youtube"></n>
+                        </a>
+                    </div>
+
+                    <div class="footerNav">
+                        <ul>
+                            <li><a href="D_home.html" target="_blank">Home</a></li>
+                            <!-- <li><a href="">News</a></li> -->
+                            <li><a href="D_home.html#about_us" target="_blank">About</a></li>
+                            <li><a href="contact-us.html" target="_blank">Contact Us</a></li>
+                            <!-- <li><a href="">Our Team</a></li> -->
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="box2">
+                    <div class="student">
+                        <h3>EVENT COORDINATOR</h3>
+                        <div class="name">Ashish Jaiswal</div>
+                        <div class="email">
+                            <a href="mailto:ashishjaiswal@gmail.com"><i class="fa fa-envelope"></i>
+                                ashishjaiswal@gmail.com</a> <br>
+                        </div>
+                        <div class="mobile"><a href="tel:+91630606098863"><i class="fa fa-phone"></i>+916306098863</a>
+                        </div>
+                    </div>
+
+                    <div class="student">
+                        <h3>EVENT COORDINATOR</h3>
+                        <div class="name">Lavish Patel</div>
+                        <div class="email">
+                            <a href="mailto:lavishpatel@gmail.com"><i class="fa fa-envelope"></i>
+                                lavishpatel@gmail.com</a> <br>
+                        </div>
+                        <div class="mobile"><a href="tel:+916307967770"><i class="fa fa-phone"></i>+916307967770</a>
+                        </div>
+                    </div>
+
+                    <div class="student">
+                        <h3>EVENT COORDINATOR</h3>
+                        <div class="name">Udisha Verma</div>
+                        <div class="email">
+                            <a href="mailto:udishaverma2@gmail.com"><i class="fa fa-envelope"></i>
+                                udishaverma2@gmail.com</a> <br>
+                        </div>
+                        <div class="mobile"><a href="tel:+918287465191"><i class="fa fa-phone"></i>+918287465191</a>
+                        </div>
+                    </div>
+
+                    <div class="student">
+                        <h3>EVENT COORDINATOR</h3>
+                        <div class="name">Vidushi Srivastava</div>
+                        <div class="email">
+                            <a href="mailto:vidushisrivastava@gmail.com"><i class="fa fa-envelope"></i>
+                                vidushisrivastava@gmail.com</a> <br>
+                        </div>
+                        <div class="mobile"><a href="tel:+918800147574"><i class="fa fa-phone"></i>+918800147574</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footerBottom">
+                <div class="footerBottomLeft">
+                    <span>&copy;2024<span class="designer">TEAM DHAROHAR</span>ALL RIGHTS RESERVED</span>
+                </div>
+                <div class="footerBottomRight">
+                    <span>ABES ENGINEERING COLLEGE, GHAZIABAD</span>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>
