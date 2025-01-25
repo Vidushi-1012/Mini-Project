@@ -7,41 +7,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Dharohar - The Ultimate Fest</title>
+    <title>Schedule - Dharohar 2024</title>
     <style>
-        /* MAIN BODY */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-            height: 100%;
+        :root {
+            --mainc: rgb(246 200 96);
         }
 
         body {
-            background-color: rgb(22, 22, 67);
-            overflow-x: hidden;
-            display: flex;
-            flex-direction: column;
-            min-height: 100%;
-        }
-
-        h1 {
             width: 100%;
-            font-size: 40px;
-            background-color: rgba(54, 54, 66, 0.938);
-            color: white;
-            text-align: center;
-            margin-bottom: 5px;
-            margin-top: 40px;
-            border-radius: 10px;
-            box-shadow: 4px 4px 8px rgba(23, 139, 255, 0.8);
+            background-color: rgb(16, 16, 60);
+            color: rgba(255, 255, 255, 0.989);
+            justify-self: center;
+            font-size: larger;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
         }
 
-        /* NAV BAR */
         nav {
             width: 100%;
             height: 80px;
@@ -119,8 +106,8 @@
             right: 0;
             /* padding: 40px; */
             width: 360px;
-            height: 700px;
-            background-color: #1918248b;
+            height: 360px;
+            background-color: #19182465;
         }
 
         .dropdown-content a {
@@ -151,74 +138,63 @@
             flex: 1;
         }
 
-        /* Gallary */
-        .gallery-container {
-            padding-top: 80px;
-            /* width: 100%; */
-            /* max-width: 1200px; */
-            /* margin: 0 auto; */
-        }
 
-        .gallery-header {
+        /* ------------------------------------------schedule----------------------------------------- */
+
+
+        h1 {
             text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .gallery-header h1 {
-            font-size: 2 rem;
-            font-family: 'Times New Roman', Times, serif;
             color: #ffd700;
-            text-decoration: dotted;
-
+            text-decoration: underline;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
         }
 
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            padding: 60px;
-        }
-
-        .gallery-item {
+        .relativeposition {
             position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            z-index: 0;
+            top: 100px;
+
         }
 
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: rgba(54, 54, 66, 0.8);
+            box-shadow: 4px 4px 2px rgba(114, 106, 198, 0.73);
+            border-radius: 25px;
+            margin-bottom: 40px;
+            font-family: 'Times New Roman', Times, serif;
         }
 
-        .gallery-item:hover img {
-            transform: scale(1.1);
+        .section {
+            padding: 20px;
+            border-bottom: 1px solid rgb(166, 155, 232);
         }
 
-        .gallery-caption {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            padding: 10px;
-            background: rgba(0, 0, 0, 0.7);
-            color: #ffd700;
-            text-align: center;
-            font-weight: bold;
-            font-size: 1rem;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+        .section h3 {
+            color: rgb(133, 133, 230);
+            font-size: 24px;
+            margin-bottom: 5px;
         }
 
-        .gallery-item:hover .gallery-caption {
-            opacity: 1;
+        .section .subheading {
+            font-size: 20px;
+            font-weight: 600;
         }
+
+        .section .text {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
 
         /* -------------------------------------------FOOTER-------------------------------------------------------- */
 
         footer {
-            background-color: #090b3f;
+            background-color: #181925;
+            font-family: 'Times New Roman', Times, serif;
         }
 
         .cont {
@@ -247,7 +223,7 @@
         }
 
         .icons a i {
-            font-size: 1em;
+            font-size: 1.5em;
             color: rgb(17, 0, 255);
             opacity: 0.9;
         }
@@ -318,11 +294,13 @@
             border: 3px solid rgba(12, 6, 65, 0.871);
             box-shadow: 4px 4px 2px rgba(101, 105, 168, 0.871);
             line-height: 1.5;
+            font-size: 18px;
         }
 
         .student h3 {
             color: rgb(255, 0, 212);
             font-style: italic;
+            font-size: 20px;
         }
 
         .student a:link,
@@ -368,6 +346,7 @@
             opacity: 70%;
             display: flex;
             gap: 750px;
+            font-size: smaller;
         }
 
         .designer {
@@ -398,9 +377,8 @@
 </head>
 
 <body>
-
     <nav>
-        <a href="D1_home.html"><img src="Dharohar_logo_cropped-removebg-preview.png" alt="Dharohar Logo"></a>
+        <a href="D_home.html"><img src="Dharohar_logo_cropped-removebg-preview.png" alt="Dharohar Logo"></a>
         <div class="nav-bar">
             <a href="D_home.html" target="_blank">Home</a>
             <a href="D_home.html#about_us" target="_blank">About Us</a>
@@ -418,176 +396,52 @@
             </div>
         </div>
     </nav>
+    <div class="relativeposition">
+        <div class="container">
+            <h1>
+                Full Schedule for धरोहर '24
+            </h1>
+            <div class="section">
+                <h3>Day 1: Magical & Creative Kickoff</h3>
+                <div class="subheading">5:00 PM - 6:00 PM: Welcome & Icebreaker Games</div>
+                <div class="text">Fun games like “Human Bingo” and “Two Truths and a Lie” to start the event.</div>
+                <div class="subheading">6:00 PM - 7:00 PM: Magic Show</div>
+                <div class="text">A mesmerizing performance by a professional magician.</div>
+                <div class="subheading">7:00 PM - 8:00 PM: Handicrafts Workshop</div>
+                <div class="text">Participants create their own crafts, such as painting or DIY art projects.</div>
+                <div class="subheading">8:00 PM - 10:00 PM: Trivia Challenge & Quick Contests</div>
+                <div class="text">Team-based trivia and short contests like “Minute to Win It” games.</div>
+            </div>
 
-    <div class="gallery-container">
-        <div class="gallery-header">
-            <h1> Dharohar Glimpses </h1>
+            <div class="section">
+                <h3>Day 2: Musical & Fun Evening</h3>
+                <div class="subheading">5:00 PM - 6:00 PM: Outdoor Games & Challenges</div>
+                <div class="text">Relay races, scavenger hunts, or tug-of-war to energize the evening.</div>
+                <div class="subheading">6:00 PM - 7:30 PM: Music Concert</div>
+                <div class="text">A live performance by a band or solo artist featuring popular and uplifting music.
+                </div>
+                <div class="subheading">7:30 PM - 8:30 PM: Costume Contest</div>
+                <div class="text">Participants dress up according to the evening’s theme, with prizes for creativity.
+                </div>
+                <div class="subheading">8:30 PM - 10:00 PM: Dance Party</div>
+                <div class="text">A DJ-led session for everyone to groove and enjoy freestyle dancing.</div>
+            </div>
+
+            <div class="section">
+                <h3>Day 3: Dance-Filled Grand Finale</h3>
+                <div class="subheading">5:00 PM - 6:00 PM: Fun Warm-Up Games</div>
+                <div class="text">Interactive activities like charades, Pictionary, or “Simon Says.”</div>
+                <div class="subheading">6:00 PM - 7:30 PM: Talent Contest</div>
+                <div class="text">Participants showcase their unique skills, from singing to storytelling.</div>
+                <div class="subheading">7:30 PM - 8:30 PM: Dance Performances</div>
+                <div class="text">A lineup of stunning solo and group dance performances.</div>
+                <div class="subheading">8:30 PM - 10:00 PM: Closing Ceremony & Glow Party</div>
+                <div class="text">Awards for the contests, thank-you notes, and a neon-themed farewell celebration.
+                </div>
+            </div>
+
         </div>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="M1.jpg" alt="Event 1">
-                <div class="gallery-caption">Magic Show</div>
-            </div>
-            <div class="gallery-item">
-                <img src="M2.jpg" alt="Event 2">
-                <div class="gallery-caption">Magic Show</div>
-            </div>
-            <div class="gallery-item">
-                <img src="M3.jpg" alt="Event 3">
-                <div class="gallery-caption">Magic Show</div>
-            </div>
-            <div class="gallery-item">
-                <img src="M4.jpg" alt="Event 4">
-                <div class="gallery-caption">Magic Show</div>
-            </div>
-            <div class="gallery-item">
-                <img src="M5.jpg" alt="Event 5">
-                <div class="gallery-caption">Magic Show</div>
-            </div>
-            <div class="gallery-item">
-                <img src="M6.jpg" alt="Event 6">
-                <div class="gallery-caption">Magic Show</div>
-            </div>
-            <div class="gallery-item">
-                <img src="M7.jpg" alt="Event 6">
-                <div class="gallery-caption">Magic Show</div>
-            </div>
-            <div class="gallery-item">
-                <img src="M8.jpg" alt="Event 6">
-                <div class="gallery-caption">Magic Show</div>
-            </div>
-            <div class="gallery-item">
-                <img src="M9.jpg" alt="Event 6">
-                <div class="gallery-caption">Magic Show</div>
-            </div>
-            <div class="gallery-item">
-                <img src="M10.jpg" alt="Event 6">
-                <div class="gallery-caption">Magic Show</div>
-            </div>
-            <div class="gallery-item">
-                <img src="d1.jpg" alt="Event 6">
-                <div class="gallery-caption">Dance Performance</div>
-            </div>
-            <div class="gallery-item">
-                <img src="D2.jpg" alt="Event 6">
-                <div class="gallery-caption">Dance Performance</div>
-            </div>
-            <div class="gallery-item">
-                <img src="D3.jpg" alt="Event 6">
-                <div class="gallery-caption">Dance Performance</div>
-            </div>
-            <div class="gallery-item">
-                <img src="D4.jpg" alt="Event 6">
-                <div class="gallery-caption">Dance Performance</div>
-            </div>
-            <div class="gallery-item">
-                <img src="D5.jpg" alt="Event 6">
-                <div class="gallery-caption">Dance Performance</div>
-            </div>
-            <div class="gallery-item">
-                <img src="D6.jpg" alt="Event 6">
-                <div class="gallery-caption">Dance Performance</div>
-            </div>
-            <div class="gallery-item">
-                <img src="D7.jpg" alt="Event 6">
-                <div class="gallery-caption">Dance Performance</div>
-            </div>
-            <div class="gallery-item">
-                <img src="D8.jpg" alt="Event 6">
-                <div class="gallery-caption">Dance Performance</div>
-            </div>
-            <div class="gallery-item">
-                <img src="D9.jpg" alt="Event 6">
-                <div class="gallery-caption">Dance Performance</div>
-            </div>
-            <div class="gallery-item">
-                <img src="D10.jpg" alt="Event 6">
-                <div class="gallery-caption">Dance Performance</div>
-            </div>
-            <div class="gallery-item">
-                <img src="S1.jpg" alt="Event 6">
-                <div class="gallery-caption">Singing Concert</div>
-            </div>
-            <div class="gallery-item">
-                <img src="S2.jpg" alt="Event 6">
-                <div class="gallery-caption">Singing Concert</div>
-            </div>
-            <div class="gallery-item">
-                <img src="S3.jpg" alt="Event 6">
-                <div class="gallery-caption">Singing Concert</div>
-            </div>
-            <div class="gallery-item">
-                <img src="S4.jpg" alt="Event 6">
-                <div class="gallery-caption">Singing Concert</div>
-            </div>
-            <div class="gallery-item">
-                <img src="S5.jpg" alt="Event 6">
-                <div class="gallery-caption">Singing Concert</div>
-            </div>
-            <div class="gallery-item">
-                <img src="S6.jpg" alt="Event 6">
-                <div class="gallery-caption">Singing Concert</div>
-            </div>
-            <div class="gallery-item">
-                <img src="S7.jpg" alt="Event 6">
-                <div class="gallery-caption">Singing Concert</div>
-            </div>
-            <div class="gallery-item">
-                <img src="S8.jpg" alt="Event 6">
-                <div class="gallery-caption">Singing Concert</div>
-            </div>
-            <div class="gallery-item">
-                <img src="S9.jpg" alt="Event 6">
-                <div class="gallery-caption">Singing Concert</div>
-            </div>
-            <div class="gallery-item">
-                <img src="S10.jpg" alt="Event 6">
-                <div class="gallery-caption">Singing Concert</div>
-            </div>
-            <div class="gallery-item">
-                <img src="G11.jpg" alt="Event 6">
-                <div class="gallery-caption">Handicraft Workshops</div>
-            </div>
-            <div class="gallery-item">
-                <img src="G2.jpg" alt="Event 6">
-                <div class="gallery-caption">Handicraft Workshops</div>
-            </div>
-            <div class="gallery-item">
-                <img src="G3.jpg" alt="Event 6">
-                <div class="gallery-caption">Handicraft Workshops</div>
-            </div>
-            <div class="gallery-item">
-                <img src="G4.jpg" alt="Event 6">
-                <div class="gallery-caption">Handicraft Workshops</div>
-            </div>
-            <div class="gallery-item">
-                <img src="g5.jpg" alt="Event 6">
-                <div class="gallery-caption">Handicraft Workshops</div>
-            </div>
-            <div class="gallery-item">
-                <img src="G6.jpg" alt="Event 6">
-                <div class="gallery-caption">Handicraft Workshops</div>
-            </div>
-            <div class="gallery-item">
-                <img src="G7.jpg" alt="Event 6">
-                <div class="gallery-caption">Handicraft Workshops</div>
-            </div>
-            <div class="gallery-item">
-                <img src="G12.jpg" alt="Event 6">
-                <div class="gallery-caption">Handicraft Workshops</div>
-            </div>
-            <div class="gallery-item">
-                <img src="G9.jpg" alt="Event 6">
-                <div class="gallery-caption">Handicraft Workshops</div>
-            </div>
-            <div class="gallery-item">
-                <img src="G10.jpg" alt="Event 6">
-                <div class="gallery-caption">Handicraft Workshops</div>
-            </div>
-        </div>
-
-
-
+        <!-- ---------------------------------------------------footer------------------------------------------------------>
         <footer>
             <div class="cont">
                 <div class="box1">
@@ -609,10 +463,10 @@
 
                     <div class="footerNav">
                         <ul>
-                            <li><a href="D1_home.html">Home</a></li>
+                            <li><a href="D_home.html" target="_blank">Home</a></li>
                             <!-- <li><a href="">News</a></li> -->
-                            <li><a href="#about">About</a></li>
-                            <li><a href="ContactUs.html">Contact Us</a></li>
+                            <li><a href="D_home.html#about_us" target="_blank">About</a></li>
+                            <li><a href="contact-us.html" target="_blank">Contact Us</a></li>
                             <!-- <li><a href="">Our Team</a></li> -->
                         </ul>
 
@@ -674,7 +528,7 @@
                 </div>
             </div>
         </footer>
-
+    </div>
 </body>
 
 </html>
